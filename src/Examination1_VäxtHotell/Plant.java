@@ -5,15 +5,29 @@ public abstract class Plant {
     private String name;
 
     public Plant(String name, double height) {
-        this.name = name; //Jag behöver inga setters i detta program, därför väljer jag att undvika dem.
-        this.height = height;
+        setName(name);
+        setHeight(height);
     }
 
-    public String getName() { //Eftersom name och height är Private används getters för att komma åt deras värden, inkapsling.
+    public String getName() { //Inkapsling
         return name;
     }
 
     public double getHeight() {
         return height;
+    }
+
+    public void setHeight(double height) {
+        if (height > 0)  //Inkapsling
+            this.height = height;
+        else
+            throw new IllegalArgumentException("Plantans höjd måste vara högre än 0.");
+    }
+
+    public void setName(String name) {
+        if (name == null)  //inkapsling
+            throw new IllegalArgumentException("Namnet får ej vara tomt.");
+        else
+            this.name = name;
     }
 }
