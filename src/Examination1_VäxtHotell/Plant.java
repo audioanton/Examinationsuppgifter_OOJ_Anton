@@ -25,7 +25,7 @@ public abstract class Plant {
     }
 
     public void setName(String name) {
-        if (name == null)  //inkapsling
+        if (name.isBlank())  //inkapsling
             throw new IllegalArgumentException("Namnet får ej vara tomt.");
         else
             this.name = name;
