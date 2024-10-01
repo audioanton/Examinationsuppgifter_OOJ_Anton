@@ -4,10 +4,10 @@ import static java.lang.String.format;
 
 public class RunPlantProgram {
     public RunPlantProgram() {
-        Cactus c = new Cactus(ExistingPlants.plant1.getName(), 0.2);
-        PalmTree pt1 = new PalmTree(ExistingPlants.plant2.getName(), 5);
-        CarnivorousPlant cp = new CarnivorousPlant(ExistingPlants.plant3.getName(), 0.7);
-        PalmTree pt2 = new PalmTree(ExistingPlants.plant4.getName(), 1);
+        Cactus c = new Cactus(ExistingPlants.plant1.getName(), ExistingPlants.plant1.getHeight());
+        PalmTree pt1 = new PalmTree(ExistingPlants.plant2.getName(), ExistingPlants.plant2.getHeight());
+        CarnivorousPlant cp = new CarnivorousPlant(ExistingPlants.plant3.getName(), ExistingPlants.plant3.getHeight());
+        PalmTree pt2 = new PalmTree(ExistingPlants.plant4.getName(), ExistingPlants.plant4.getHeight());
 
         while (true) {
             String exitMessage = "Programmet avslutas";
