@@ -10,7 +10,7 @@ public class PalmTree extends Plant implements I_nutrition {
     }
 
     @Override
-    public String calculateNutrition() {
+    public String calculateNutrition() { //polymorphism
         double result = this.getHeight() * 0.5;
         return format("%s behöver %.2f liter %s om dagen.", this.getName(), result, this.nutritionType);
     }

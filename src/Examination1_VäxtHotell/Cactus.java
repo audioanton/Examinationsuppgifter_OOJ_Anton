@@ -10,7 +10,7 @@ public class Cactus extends Plant implements I_nutrition {
     }
 
     @Override
-    public String calculateNutrition() {
+    public String calculateNutrition() { //polymorphism
         int dailyAmount = 2;
         return format("%s behöver %d cl %s om dagen.", this.getName(), dailyAmount, this.nutritionType);
     }

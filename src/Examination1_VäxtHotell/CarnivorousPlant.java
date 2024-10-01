@@ -7,11 +7,11 @@ public class CarnivorousPlant extends Plant implements I_nutrition {
 
 
     public CarnivorousPlant(String name, double height) {
-        super(name, height); //Här används konstruktorn i superklassen Plant.
+        super(name, height);
     }
 
     @Override
-    public String calculateNutrition() {
+    public String calculateNutrition() { //polymorfism
         double result = 0.1 + (this.getHeight() * 0.2);
         return format("%s behöver %.2f liter %s om dagen.", this.getName(), result, nutritionType);
     }
